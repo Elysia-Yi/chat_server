@@ -107,12 +107,3 @@ cd build
 ./chat_server                     # http://127.0.0.1:8080
 CHAT_LOG_LEVEL=debug ./chat_server
 ```
-
-`chat_server` 会自动识别静态资源目录（从项目根目录或 `build/` 启动都能找到 `static/index.html`）。
-前端加载同目录下的 `static/jquery.min.js`，无需外网。
-
-## 说明
-
-- `include/bearssl*` 与 `include/bearssl/` 是第三方 TLS 库头文件，仅作编译期依赖保留，
-  聊天室本身不启用 HTTPS，其中的版权声明按原样保留。
-- 服务器为单线程 Reactor：所有回调都在事件循环线程中执行，因此业务回调里不要做阻塞操作。
