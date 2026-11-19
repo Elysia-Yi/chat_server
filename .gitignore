@@ -1,0 +1,5 @@
+build/
+cmake-build-*/
+
+# 运行日志（chat_server 默认写当前目录）
+*.log
